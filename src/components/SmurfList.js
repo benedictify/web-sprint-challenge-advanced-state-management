@@ -18,8 +18,8 @@ const SmurfList = (props) => {
 
 	return (
 	<div className="listContainer">
-		{props.smurfList.map(smurf => {
-				return <Smurf smurf={smurf} />
+		{props.smurfList.map((smurf, index) => {
+				return <Smurf key={index} smurf={smurf} />
 			})}
 	</div>
 	);
