@@ -8,7 +8,7 @@ export const fetchStart = () => {
 	return({ type: FETCH_START });
 }
 
-export const fetchSuccess = () => {
+export const fetchSuccess = (smurfList) => {
 	return({ type: FETCH_SUCCESS, payload: smurfList });
 }
 
