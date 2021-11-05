@@ -12,11 +12,10 @@ import { getSmurfs } from "./actions";
 class App extends Component {
 	constructor(props) {
 		super();
-		this.state = props;
 	}
 
 	componentDidMount() {
-		this.state.dispatch(getSmurfs())
+		this.props.dispatch(getSmurfs())
 	}
 
 	render() {
