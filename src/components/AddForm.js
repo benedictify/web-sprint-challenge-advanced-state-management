@@ -28,10 +28,10 @@ const AddForm = (props) => {
 			setErrorMessage("Name, Postition and Nickname must not be blank.")
 		} else {
 			setErrorMessage("")
-			props.dispatch(addSmurf(state))
+			props.addSmurf(state)
 			setSmurfAddedMsg("Smurf Added")
 		}
-		
+
 		setState(initialState)
 	}
 
@@ -65,13 +65,7 @@ const AddForm = (props) => {
 	</section>);
 }
 
-const mapStateToProps = (state) => {
-	return {
-		...state
-	}
-}
-
-export default connect(mapStateToProps)(AddForm);
+export default connect(null, { addSmurf })(AddForm);
 
 //Task List:
 //1. Connect the errorMessage, setError and addSmurf actions to the AddForm component.

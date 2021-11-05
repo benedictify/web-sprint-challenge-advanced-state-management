@@ -41,6 +41,11 @@ section {
   padding:0;
 }
 
+.okay {
+	color: skyblue;
+	text-align: right;
+}
+
 
 
 @media (max-width: 800px) {

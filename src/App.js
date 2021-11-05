@@ -8,6 +8,7 @@ import AddForm from './components/AddForm';
 import SmurfList from './components/SmurfList';
 import Header from './components/Header';
 import { getSmurfs } from "./actions";
+import Okay from "./components/Okay";
 
 class App extends Component {
 	constructor(props) {
@@ -15,7 +16,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		this.props.dispatch(getSmurfs())
+		this.props.getSmurfs()
 	}
 
 	render() {
@@ -27,6 +28,8 @@ class App extends Component {
 					<SmurfList />
 					<AddForm />
 				</main>
+
+				<Okay />
 			</div>
 		);
 	}
@@ -40,7 +43,7 @@ const mapStateToProps = (state) => {
 	}
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { getSmurfs })(App);
 
 //Task List:
 //1. Connect the fetchSmurfs actions to the App component.
